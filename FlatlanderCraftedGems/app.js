@@ -1,6 +1,6 @@
 ( function () {
 
-	var app = angular.module ( 'store' , [] );
+	var app = angular.module ( 'store' , [ 'store-products' ] );
 
 	app.controller( 'StoreController', function () {
 
@@ -66,5 +66,7 @@
 			return checkTab === this.tab;
 		};
 	} );
+
+
 
 } ) ( );
