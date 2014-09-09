@@ -1,6 +1,8 @@
 <html ng-app="store">
 	<head>
 		<link rel="stylesheet" type="text/css" href="lib/bootstrap.min.css" />
+    	<link rel="stylesheet" type="text/css" href="application.css" />
+
 	</head>
 	<body ng-controller="StoreController as store">
 		<div class="list-group">
@@ -37,7 +39,7 @@
 		                <blockquote>
 		                  <strong>{{review.stars}} Stars</strong>
 		                  {{review.body}}
-		                  <cite class="clearfix"> by: {{review.author}}</cite>
+		                  <cite class="clearfix"> by: {{review.author}} on {{ review.createdOn | date:'MM/dd/yyyy @ h:mma' }}</cite>
 		                </blockquote>
 		              </li>
 		            </ul>
@@ -48,7 +50,7 @@
 		              <blockquote>
 		                  <strong>{{reviewCtrl.review.stars}} Stars</strong>
 		                  {{reviewCtrl.review.body}}
-		                  <cite class="clearfix"> by: {{reviewCtrl.review.author}}</cite>
+		                  <cite class="clearfix"> by: {{reviewCtrl.review.author}} </cite>
 		                </blockquote>
 
 		              <!--  Review Form -->
